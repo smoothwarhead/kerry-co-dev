@@ -1,0 +1,60 @@
+.signinform {
+	display: block;
+	margin-top: 38px;
+	width: 100%;
+	height: 100%;
+	/* background: teal; */
+}
+.signin-input {
+	width: 100%;
+	padding: 3% 3%;
+	outline: #00174f;
+	border: 1px solid #00174f;
+	border-radius: 3px;
+	margin-bottom: 13px;
+	background: transparent;
+	font-size: 1rem;
+	font-weight: 400;
+}
+.signin-input::placeholder {
+	font-size: 16px;
+	color: grey;
+}
+.signin-check-parent-con {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 14px;
+	/* background: turquoise; */
+}
+.signin-check {
+	display: flex;
+	justify-content: space-between;
+	/* background: tan; */
+	width: 27%;
+}
+.signin-check-con {
+	height: 18px;
+	width: 18px;
+}
+.remember-me {
+	font-size: 14px;
+}
+.forgot-password {
+	font-size: 14px;
+	color: grey;
+	opacity: 0.7;
+}
+.signin-btn {
+	width: 100%;
+	border: 1px solid #00174f;
+	background: transparent;
+	padding: 3%;
+	color: #00174f;
+	font-size: 15px;
+	font-weight: 700;
+	outline: none;
+	/* border: none; */
+	border-radius: 3px;
+	margin-top: 30px;
+	cursor: pointer;
+}

@@ -1,0 +1,7 @@
+.content {
+	background: rgb(62, 99, 95);
+	margin-top: 66px;
+}
+.content-container {
+	display: flex;
+}

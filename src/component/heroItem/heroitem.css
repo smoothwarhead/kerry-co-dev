@@ -1,0 +1,28 @@
+.hero-item {
+	display: flex;
+	justify-content: space-between;
+	height: 400px;
+	margin-top: 25px;
+	/* background: gainsboro; */
+	width: 100%;
+	gap: 1rem;
+}
+.hero-card {
+	width: 100%;
+	height: 100%;
+	/* background: grey; */
+}
+.hero-card-image {
+	height: 80%;
+	width: 100%;
+	background: gainsboro;
+}
+.hero-card-title {
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-top: 12px;
+}
+.hero-card-description {
+	font-size: 12px;
+	margin-top: 7px;
+}
