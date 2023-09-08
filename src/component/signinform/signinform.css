@@ -28,9 +28,10 @@
 }
 .signin-check {
 	display: flex;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	/* background: tan; */
-	width: 27%;
+	width: 40%;
+	gap: 0.5rem;
 }
 .signin-check-con {
 	height: 18px;
@@ -47,9 +48,9 @@
 .signin-btn {
 	width: 100%;
 	border: 1px solid #00174f;
-	background: transparent;
+	background: #00174f;
 	padding: 3%;
-	color: #00174f;
+	color: white;
 	font-size: 15px;
 	font-weight: 700;
 	outline: none;

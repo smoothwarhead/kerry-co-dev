@@ -1,0 +1,92 @@
+.sort-item {
+	padding: 1.1rem 0px;
+	font-size: 1.2em;
+	display: block;
+	border-top: 1px solid #8080807e;
+	border-bottom: 1px solid #8080807e;
+}
+.sort-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.sort-title-p {
+	font-size: 15px;
+	font-weight: 500;
+}
+.sort-icon {
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+.sort-item.open .sort-icon {
+	transform: rotate(180deg);
+}
+.sort-content {
+	height: 0;
+	display: none;
+	overflow: hidden;
+	padding-top: 15px;
+}
+.sort-item.open .sort-content {
+	height: auto;
+	display: block;
+}
+.input-and-label {
+	display: flex;
+	align-items: center;
+	margin-bottom: 23px;
+}
+.radio-input {
+	height: 20px;
+	width: 20px;
+}
+.radio-input input {
+	cursor: pointer;
+	height: 100%;
+	width: 100%;
+	background: black;
+	border: 2px solid black;
+	outline: black;
+}
+
+.input-label {
+	font-size: 1rem;
+	margin-left: 20px;
+	cursor: pointer;
+}
+.input-and-label:last-child {
+	margin-bottom: 0px;
+}
+.size-btn-con {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 7px;
+	width: 100%;
+}
+.size-drop-btn {
+	font-size: 13px;
+	font-weight: bold;
+	height: 45px;
+	background: transparent;
+	border: 1px solid #00174f;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: all 0.1s ease-in-out;
+}
+.size-drop-btn:hover {
+	background: #00174f;
+	border: none;
+	color: white;
+}
+.sort-check-label {
+	display: flex;
+	cursor: pointer;
+}
+.sort-check {
+	height: 16px;
+	width: 16px;
+}
+.check-textt {
+	margin-left: 20px;
+	font-size: 1rem;
+}

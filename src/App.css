@@ -7,6 +7,13 @@
 	color: #00174f;
 	font-family: "Futura Std", sans-serif;
 }
+body::-webkit-scrollbar {
+	width: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: slategray;
+}
 
 @media (prefers-reduced-motion: no-preference) {
 	.App-logo {

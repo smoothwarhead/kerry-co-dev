@@ -1,5 +1,11 @@
 .sort {
-	background: rgb(180, 56, 56);
+	/* background: rgb(180, 56, 56); */
 	height: 100%;
-	width: 30%;
+	width: 23%;
+	background: white;
+	/* overflow: auto; */
+	position: sticky;
+	top: 0px;
+	bottom: 0px;
+	/* border: 3px solid purple; */
 }
