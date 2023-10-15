@@ -196,11 +196,12 @@
 }
 
 /* user-menu */
+
 .user-menu {
 	background: #00174f;
 	width: 15%;
 	position: absolute;
-	top: 13%;
+	top: 50%;
 	right: 0px;
 	z-index: 100;
 	padding: 2%;

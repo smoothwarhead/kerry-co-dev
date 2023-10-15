@@ -1,6 +1,8 @@
 import React from "react";
 import "./cart.css";
-import { ReactComponent as GreenTick } from "./greenmark.svg";
+import { ReactComponent as GreenCheck } from "./greencheck.svg";
+import { ReactComponent as Lock } from "./lock.svg";
+import { ReactComponent as Paypalbtn } from "./paypalbtn.svg";
 function Cart() {
 	return (
 		<div className="cart-page">
@@ -30,7 +32,7 @@ function Cart() {
 									</p>
 									<div className="cart-page-shopping-bag-product-buy-one">
 										<div className="cart-page-shopping-bag-product-buy-one-svg">
-											<GreenTick />
+											<GreenCheck />
 										</div>
 										BUY ONE, GET ONE 50% OFF <u>Details</u>
 									</div>
@@ -92,6 +94,21 @@ function Cart() {
 							Estimated Total
 						</p>
 						<p className="cart-page-order-summary-estimated-price">$78.95</p>
+					</div>
+					<p className="cart-page-order-summary-learn-more">
+						4 interest-free payments of $19.73 with <b>klarna.</b>{" "}
+						<u>Learn More</u>
+					</p>
+					<button className="cart-page-order-summary-checkout-btn">
+						<Lock /> GO TO CHECKOUT
+					</button>
+					<div className="cart-page-order-summary-paypal-klarna-sec">
+						<button className="cart-page-order-summary-paypal-btn">
+							<Paypalbtn />
+						</button>
+						<button className="cart-page-order-summary-paypal-btn">
+							Klarna
+						</button>
 					</div>
 				</div>
 			</div>

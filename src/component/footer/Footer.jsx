@@ -1,4 +1,10 @@
 import React from "react";
+import { ReactComponent as FooterLogo } from "./Logo.svg";
+import { ReactComponent as FooterFacebook } from "./facebook-f.svg";
+import { ReactComponent as FooterTwitter } from "./twitter.svg";
+import { ReactComponent as Footerprintest } from "./pinterest.svg";
+import { ReactComponent as Footerinsta } from "./instagram.svg";
+import { ReactComponent as FooterYoutube } from "./youtube.svg";
 import "./footer.css";
 // import Firstlist from "./Firstlist";
 
@@ -112,16 +118,28 @@ function Footer() {
 						<li className="footer-li">Chat</li>
 					</ul>
 					<div className="footer-social-icon">
-						<div className="icon"></div>
-						<div className="icon"></div>
-						<div className="icon"></div>
-						<div className="icon"></div>
-						<div className="icon"></div>
+						<div className="icon">
+							<FooterTwitter />
+						</div>
+						<div className="icon">
+							<FooterFacebook />
+						</div>
+						<div className="icon">
+							<Footerinsta />
+						</div>
+						<div className="icon">
+							<Footerprintest />
+						</div>
+						<div className="icon">
+							<FooterYoutube />
+						</div>
 					</div>
 				</div>
 			</div>
 			<div className="footer-lower-section">
-				<div className="footer-logo"></div>
+				<div className="footer-logo">
+					<FooterLogo />
+				</div>
 				<ul className="footer-lower-section-ul">
 					<li className="footer-lower-section-li">Terms & Conditions</li>
 					<li className="footer-lower-section-li">Privacy Policy</li>

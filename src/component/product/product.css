@@ -25,6 +25,10 @@
 	background: grey;
 	position: relative;
 }
+.product-img img {
+	width: 100%;
+	height: 100%;
+}
 .product-img:hover .product-img-overlay {
 	display: flex;
 	cursor: pointer;

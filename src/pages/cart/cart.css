@@ -1,5 +1,5 @@
 .cart-page {
-	padding: 2% 2% 0px 2%;
+	padding: 2% 2% 15% 2%;
 }
 .cart-page-free-shipping {
 	display: flex;
@@ -81,7 +81,7 @@
 	color: #00164fad;
 }
 .cart-page-shopping-bag-product-buy-one-svg {
-	background: #14be82;
+	/* background: #14be82; */
 	border-radius: 50%;
 	height: 16px;
 	width: 16px;
@@ -182,4 +182,40 @@
 .cart-page-order-summary-estimated-price {
 	font-size: 17px;
 	font-weight: 500;
+	margin-bottom: 55px;
+}
+.cart-page-order-summary-learn-more {
+	font-size: 15px;
+	text-align: center;
+	padding: 0px 3%;
+	margin-bottom: 34px;
+}
+.cart-page-order-summary-checkout-btn {
+	width: 100%;
+	background: #14be82;
+	outline: none;
+	border: none;
+	border-radius: 3px;
+	padding: 5% 0px 5% 0px;
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+	margin-bottom: 17px;
+	cursor: pointer;
+}
+.cart-page-order-summary-paypal-klarna-sec {
+	display: flex;
+	justify-content: space-between;
+}
+.cart-page-order-summary-paypal-btn {
+	width: 48%;
+	padding: 5% 0px 5% 0px;
+	border: 1px solid grey;
+	border-radius: 3px;
+	outline: none;
+	background: transparent;
+	/* color: white; */
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
 }

@@ -3,20 +3,23 @@
 		"id": "1",
 		"title": "COTTON CLASSICS",
 		"descprition": "100% cotton rib for all-day comfort.",
-		"image": ""
+		"image": "images/classic.jpg",
+		"alt": "boxer classic"
 	},
 	{
 		"id": "2",
 		"title": "COTTON STRETCH",
 		"descprition": "Added stretch for extra comfort and mobility.",
-		"image": ""
+		"image": "images/stretch.jpg",
+		"alt": "boxer stretch"
 	},
 	{
 		"id": "3",
 		"title": "EVERYDAY MICRO",
 		"descprition":
 			"Brushed microfiber for a softer handfeel that wicks away moisture.",
-		"image": ""
+		"image": "images/micro.jpg",
+		"alt": "boxer micro"
 	}
 ]
 

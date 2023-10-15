@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="268" height="17" viewBox="0 0 268 17">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_90" data-name="Rectangle 90" width="268" height="17" transform="translate(-0.204 -0.014)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Logo" transform="translate(0.203 0.014)" clip-path="url(#clip-path)">
+    <path id="Path_41" data-name="Path 41" d="M12.114,2.443H7.1V16.776H5.017V2.443H0V.32H12.114Z" transform="translate(0 -0.102)" fill="#fff" fill-rule="evenodd"/>
+    <path id="Path_42" data-name="Path 42" d="M40.761,14.716c3.251,0,5.654-2.679,5.654-6.271,0-3.62-2.4-6.273-5.654-6.273-3.23,0-5.633,2.653-5.633,6.273C35.129,12.037,37.531,14.716,40.761,14.716ZM40.761,0c4.781,0,7.8,3.86,7.8,8.445,0,4.439-2.932,8.443-7.844,8.443-4.738,0-7.734-3.984-7.734-8.443C32.983,3.884,36.065,0,40.761,0Z" transform="translate(-13.239 0)" fill="#fff"/>
+    <path id="Path_43" data-name="Path 43" d="M88.854,16.776H86.772V3.964h-.042l-4.464,6.367h-.34L77.464,3.964H77.42V16.776H75.338V.322h1.956l4.8,6.753L86.919.322h1.935Z" transform="translate(-30.24 -0.103)" fill="#fff" fill-rule="evenodd"/>
+    <path id="Path_44" data-name="Path 44" d="M131.1,16.776H129.02V3.964h-.042l-4.464,6.367h-.34L119.71,3.964h-.042V16.776h-2.083V.322h1.956l4.8,6.753L129.168.322H131.1Z" transform="translate(-47.199 -0.103)" fill="#fff" fill-rule="evenodd"/>
+    <path id="Path_45" data-name="Path 45" d="M165.583.32h2.509l-5.378,7.768v8.687h-2.082V8.064L155.254.32h2.509l3.888,5.668Z" transform="translate(-62.318 -0.103)" fill="#fff" fill-rule="evenodd"/>
+    <path id="Path_46" data-name="Path 46" d="M262.591,16.776h-2.08V9.608h-8.122v7.169h-2.083V.322h2.083V7.484h8.122V.322h2.08Z" transform="translate(-100.472 -0.103)" fill="#fff" fill-rule="evenodd"/>
+    <path id="Path_47" data-name="Path 47" d="M287.325,16.776h-2.084V.322h2.084Z" transform="translate(-114.495 -0.103)" fill="#fff" fill-rule="evenodd"/>
+    <path id="Path_48" data-name="Path 48" d="M305.077,14.65h6.546v2.126h-8.628V.321h2.082Z" transform="translate(-121.621 -0.103)" fill="#fff" fill-rule="evenodd"/>
+    <path id="Path_49" data-name="Path 49" d="M335.137,2.443h-5.654V7h5.654V9.124h-5.654v7.652H327.4V.32h7.735Z" transform="translate(-131.418 -0.102)" fill="#fff" fill-rule="evenodd"/>
+    <path id="Path_50" data-name="Path 50" d="M354.583,16.776H352.5V.322h2.08Z" transform="translate(-141.494 -0.103)" fill="#fff" fill-rule="evenodd"/>
+    <path id="Path_51" data-name="Path 51" d="M380.225,15.535a11.439,11.439,0,0,1-5.523,1.353c-4.443,0-7.717-3.524-7.717-8.349,0-4.847,3.358-8.539,7.776-8.539a10.641,10.641,0,0,1,5.167,1.4V3.786a9.85,9.85,0,0,0-5.208-1.614c-3.146,0-5.587,2.725-5.587,6.3,0,3.668,2.42,6.249,5.865,6.249a9.132,9.132,0,0,0,3.145-.651V10.687h-2.786V8.565h4.869Z" transform="translate(-147.307 0)" fill="#fff" fill-rule="evenodd"/>
+    <path id="Path_52" data-name="Path 52" d="M410.569,2.443h-6.141V7.412h5.928V9.534h-5.928v5.115h6.333v2.128h-8.418V.32h8.225Z" transform="translate(-161.5 -0.102)" fill="#fff" fill-rule="evenodd"/>
+    <path id="Path_53" data-name="Path 53" d="M430.381,7.508h1.338c2.232,0,2.869-1.3,2.85-2.675-.025-1.547-.831-2.485-2.85-2.485h-1.338Zm1.57-7.188c2.932,0,4.761,1.762,4.761,4.607a4.134,4.134,0,0,1-2.422,4.03c1.316.989,2.126,2.507,3.229,4.559.618,1.135.977,1.688,1.979,3.261h-2.487L435.1,13.393c-1.913-3.376-2.784-3.762-3.844-3.762h-.873v7.145H428.3V.319Z" transform="translate(-171.917 -0.102)" fill="#fff"/>
+    <path id="Path_54" data-name="Path 54" d="M223.12,6.336H211.973V14.59H223.12Z" transform="translate(-85.085 -2.031)" fill="#e31937" fill-rule="evenodd"/>
+    <path id="Path_55" data-name="Path 55" d="M204.5,6.371H193.356V14.6H204.5Z" transform="translate(-77.612 -2.042)" fill="#fff" fill-rule="evenodd"/>
+    <path id="Path_56" data-name="Path 56" d="M193.353.325h22.293v4.1H193.353Z" transform="translate(-77.611 -0.104)" fill="#00285d" fill-rule="evenodd"/>
+    <path id="Path_57" data-name="Path 57" d="M193.353,18.448h22.293v4.115H193.353Z" transform="translate(-77.611 -5.914)" fill="#00285d" fill-rule="evenodd"/>
+  </g>
+</svg>

@@ -58,12 +58,40 @@ function Navbar() {
 									setSearchOpen(!searchOpen);
 								}}
 							/>
-							<User
-								onClick={() => {
-									setOpenUser(!openUser);
-								}}
-								style={{ cursor: "pointer" }}
-							/>
+							<div className="user-over-container">
+								<User
+									onClick={() => {
+										setOpenUser(!openUser);
+									}}
+									style={{ cursor: "pointer" }}
+								/>
+								{openUser && (
+									<div className="user-menu">
+										<p
+											className="signin-link"
+											onClick={() => {
+												setOpenSignIn(!openSignIn);
+												setOpenUser(!openUser);
+											}}>
+											Sign In
+										</p>
+										<p
+											className="signin-link"
+											onClick={() => {
+												setOpenUser(!openUser);
+											}}>
+											<Link to="/signup">Create Account</Link>
+										</p>
+										<p
+											className="signin-link"
+											onClick={() => {
+												setOpenUser(!openUser);
+											}}>
+											<Link to="/trackorder">Track Order</Link>
+										</p>
+									</div>
+								)}
+							</div>
 							<Shoppingbag
 								style={{
 									width: "17px",
@@ -150,32 +178,7 @@ function Navbar() {
 					</div>
 				</div>
 			)}
-			{openUser && (
-				<div className="user-menu">
-					<p
-						className="signin-link"
-						onClick={() => {
-							setOpenSignIn(!openSignIn);
-							setOpenUser(!openUser);
-						}}>
-						Sign In
-					</p>
-					<p
-						className="signin-link"
-						onClick={() => {
-							setOpenUser(!openUser);
-						}}>
-						<Link to="/signup">Create Account</Link>
-					</p>
-					<p
-						className="signin-link"
-						onClick={() => {
-							setOpenUser(!openUser);
-						}}>
-						<Link to="/trackorder">Track Order</Link>
-					</p>
-				</div>
-			)}
+
 			{openCartBag && <CartBag ClosecartBag={ClosecartBag} />}
 		</div>
 	);

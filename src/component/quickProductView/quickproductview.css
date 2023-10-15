@@ -11,7 +11,7 @@
 .product-quick-view-container {
 	background: white;
 	height: 100%;
-	width: 30%;
+	width: 32%;
 	position: absolute;
 	overflow-y: scroll;
 	right: 0px;
@@ -71,6 +71,9 @@
 	width: 100%;
 	background: #80808094;
 	margin-top: 35px;
+}
+.product-quick-view-image-display img {
+	height: 100%;
 }
 .product-quick-view-color {
 	padding: 0px 6% 0px 10%;

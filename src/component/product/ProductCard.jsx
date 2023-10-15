@@ -3,8 +3,10 @@ import { useState } from "react";
 import "./product.css";
 import QuickProductView from "../quickProductView/QuickProductView";
 function ProductCard({ Productdata }) {
+	const [detail, setDetail] = useState([]);
 	const [openQuickView, setOpenQuickView] = useState(false);
-	const showQuickView = () => {
+	const showQuickView = (product) => {
+		setDetail([{ ...product }]);
 		setOpenQuickView(true);
 		if (typeof window != "undefined" && window.document) {
 			document.body.style.overflow = "hidden";
@@ -14,13 +16,17 @@ function ProductCard({ Productdata }) {
 		setOpenQuickView(false);
 		document.body.style.overflow = "unset";
 	};
+
 	return (
 		<>
 			<div className="product-card">
 				<div className="product-img">
+					<img src={Productdata.image} alt={Productdata.alt} />
 					<div className="new-product">NEW</div>
 					<div className="product-img-overlay">
-						<button onClick={showQuickView} className="product-img-overlay-btn">
+						<button
+							onClick={() => showQuickView(Productdata)}
+							className="product-img-overlay-btn">
 							QUICK VIEW
 						</button>
 					</div>
@@ -31,7 +37,18 @@ function ProductCard({ Productdata }) {
 				<p className="product-available-color">+ {Productdata.color}colors</p>
 				<div className="product-stars">x x x</div>
 			</div>
-			{openQuickView && <QuickProductView CloseQuickView={CloseQuickView} />}
+			{openQuickView ? (
+				<>
+					{/* {detail.map((det) => ( */}
+					<QuickProductView
+						// key={index}
+						detail={detail}
+						CloseQuickView={CloseQuickView}
+					/>
+					{/* ))} */}
+				</>
+			) : null}
+			{/* {openQuickView && <QuickProductView CloseQuickView={CloseQuickView} />} */}
 		</>
 	);
 }

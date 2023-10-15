@@ -27,14 +27,19 @@
 .footer-social-icon {
 	/* background: turquoise; */
 	display: flex;
-	/* justify-content: space-between; */
+	justify-content: center;
+	align-items: center;
 	margin-top: 40px;
 	gap: 1.4rem;
 }
 .icon {
-	height: 1.4rem;
-	width: 1.4rem;
-	background: yellowgreen;
+	height: 1.2rem;
+	width: 1.2rem;
+	/* background: yellowgreen; */
+}
+.icon svg {
+	height: 100%;
+	width: 100%;
 }
 .footer-lower-section {
 	/* background: teal; */
@@ -44,7 +49,7 @@
 .footer-logo {
 	height: 18px;
 	width: 268px;
-	background: tan;
+	/* background: tan; */
 	margin-bottom: 27px;
 }
 .footer-lower-section-ul {
