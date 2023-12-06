@@ -10,6 +10,7 @@ export const NavProvider = ({ children }) => {
     const [isDark, setIsDark] = useState(true);
     const [slideAccount, setSlideAccount] = useState(false);
     const [slideCart, setSlideCart] = useState(false);
+    const [slideSort, setSlideSort] = useState(false);
     const [slideSearch, setSlideSearch] = useState(false);
     const [slideForgot, setSlideForgot] = useState(false);
     const [slideMenu, setSlideMenu] = useState(false);
@@ -61,7 +62,8 @@ export const NavProvider = ({ children }) => {
             setSlideProfile,
             unScroll, setUnScroll,
             slide, setSlide,
-            openUser, setOpenUser
+            openUser, setOpenUser,
+            slideSort, setSlideSort
 
           }}
         >

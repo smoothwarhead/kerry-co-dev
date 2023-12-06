@@ -90,11 +90,12 @@
 	font-size: 16px;
 	font-weight: 500;
 	cursor: pointer;
+	color: #0f2747;
 
 }
 
 .product-name:hover {
-	color: #d5153a;
+	color: #507f85;
 	text-decoration: underline;
 
 }
@@ -103,20 +104,23 @@
 	font-size: 13px;
 	font-weight: 400;
 	margin-top: 8px;
+	color: #00174F;
+
 }
 
 .product-size {
 	font-size: 13px;
 	font-weight: 500;
 	margin-top: 8px;
-	color: #5e85e7;
+	color: #507f85;
 }
 
 .product-color {
 	font-size: 13px;
 	font-weight: 500;
 	margin-top: 8px;
-	color: #c41952;
+	color: #9ea11a
+
 }
 
 .buy-one {

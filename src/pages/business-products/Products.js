@@ -11,6 +11,7 @@ import NavContext from '../../context/NavContext';
 import { ViewContext } from '../../context/ViewContext';
 import { useNavigate } from 'react-router-dom';
 import Sort from '../../component/sort/Sort';
+import SortSlide from '../../component/slides/sort/SortSlide';
 
 // const URL = "/products";
 
@@ -23,7 +24,7 @@ const Products = () => {
 
   const { pendingData, setSelectedProduct, setQuickProduct } = useContext(BusinessDataContext);
 
-  const { unScroll, setUnScroll, slide, slideMenu } = useContext(NavContext);
+  const { unScroll, setUnScroll, slide, slideMenu, slideSort, setSlideSort } = useContext(NavContext);
   
   const { mobile } = useContext(ViewContext);
   const [sticky, setSticky] = useState(false);
@@ -121,11 +122,22 @@ const Products = () => {
   const selectQuickProduct = (product) =>{
     setQuickProduct(product)
   }
+
+  const openFilter = () =>{
+    if(!mobile){
+      return;
+    }else{
+      setSlideSort(true);
+    }
+  }
   // console.log(scrollPosition);
 
 
   return (
     <>
+
+
+      <SortSlide />
        
 
       <div className={!mobile ? "product-page" : `m-product-page ${unScroll ? "unscroll" : ""}`}>
@@ -141,13 +153,17 @@ const Products = () => {
               :
               <>
                 <div className={!mobile ? "filter-sort-con" : `m-filter-sort-con ${sticky ? "sticky" : ""}`}>
-                  <div className="filter-title">
+                  <div className="filter-title" onClick={openFilter}>
                     <LuListFilter className="filter-title-icon" />
                     <span className='filter-title-lbl'>Filter & Sort</span>
                     
                   </div>
 
-                  <Sort />
+                  {
+                    !mobile && 
+                      <Sort />
+                     
+                  }
 
                 </div>
 
