@@ -1,0 +1,51 @@
+[
+   {
+    "pack-3" : [
+
+        "kerryCo/fxlvrozvljvvpzvcpufm",
+        "kerryCo/mppylsg3vebfm8px8sny",
+        "kerryCo/IMG-packet-back",
+        "kerryCo/IMG-model-black",
+        "kerryCo/IMG-model-white"
+       
+    ],
+
+    "pack-2" : {
+        "black/grey": [
+
+            "kerryCo/IMG-packet-black-grey",
+            "kerryCo/mppylsg3vebfm8px8sny",
+            "kerryCo/IMG-packet-back",
+            "kerryCo/IMG-model-black"        
+
+        ],
+        "black/white": [
+
+            "kerryCo/IMG-packet-black-white",
+            "kerryCo/mppylsg3vebfm8px8sny",
+            "kerryCo/IMG-packet-back",
+            "kerryCo/IMG-model-black",
+            "kerryCo/IMG-model-white"
+
+
+        ],
+        "white/grey": [
+
+            "kerryCo/IMG-packet-white-grey",
+            "kerryCo/mppylsg3vebfm8px8sny",
+            "kerryCo/IMG-packet-back",
+            "kerryCo/IMG-model-white"
+
+
+        ],
+        "white/white": [
+
+            "kerryCo/IMG-model-white"
+
+
+        ]
+    }
+
+   }
+
+]

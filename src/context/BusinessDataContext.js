@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react"
 import { CartManager } from "../utils/CartManager";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -15,17 +16,21 @@ export const BusinessDataContext = createContext({});
 
 const BusinessDataProvider = ({ children }) => {
 
-    const [pending, setPending] = useState(true);
+    const [pendingData, setPendingData] = useState(false);
+
     const [businessProducts, setBusinessProducts] = useState([]);
     const [cartItems, setCartItems] = useState([]);
     const [discount, setDiscount] = useState(null);
     const [cartSubTotal, setCartSubTotal] = useState(0);
     const [contactDetails, setContactDetails] = useState([]);
     const [orderPayload, setOrderPayload] = useState({});
+    const [selectedProduct, setSelectedProduct] = useState(null);
+    const [quickProduct, setQuickProduct] = useState(null);
     const [modalOpen, setModalOpen] = useState(false);
+    const [hasPromo, setHasPromo] = useState(false);
+    const [showQuickShop, setShowQuickShop] = useState(false);
 
-    // const [openCart, setOpenCart] = useState(false);
-
+    
 
 
     useEffect(() => {
@@ -58,9 +63,6 @@ const BusinessDataProvider = ({ children }) => {
     }, [cartItems]);
 
 
-
-
-
     const handleCart = (item) => {
 
       CartManager.saveCart(item);
@@ -69,14 +71,14 @@ const BusinessDataProvider = ({ children }) => {
         setCartItems([item]);
 
       }else{
-        const checkItem = cartItems.find(c => (c.itemId === item.itemId) && (c.itemPrice === item.itemPrice) && (c.selectedDimension.DimensionId === item.selectedDimension.DimensionId));
+        const checkItem = cartItems.find(c => (c.itemId === item.itemId) && (c.itemPrice === item.itemPrice));
 
         if(checkItem){
 
           const updatedCartItems = cartItems.map(c => {
-            if((c.itemId === item.itemId) && (c.itemPrice === item.itemPrice) && (c.selectedDimension.DimensionId === item.selectedDimension.DimensionId)){
+            if((c.itemId === item.itemId) && (c.itemPrice === item.itemPrice)){
               
-              const newItem = {...checkItem, itemQuantity: checkItem.itemQuantity + 1};
+              const newItem = {...checkItem, itemQuantity: checkItem.itemQuantity +  + item.itemQuantity};
 
               return newItem;
               
@@ -179,15 +181,21 @@ const BusinessDataProvider = ({ children }) => {
       setModalOpen(false);
     }
 
-    useEffect(() => {
-      console.log(orderPayload);
-    }, [orderPayload]);
+
+    //clear cart.
+  
+    // setTimeout(() => {
+      
+    //   CartManager.removeCart();
+
+    // }, [6000]);
+   
 
    
 
   return (
     <BusinessDataContext.Provider value={{ 
-        pending, setPending, 
+        pendingData, setPendingData,
         businessProducts, setBusinessProducts,
         cartItems, setCartItems,
         handleCart,
@@ -197,8 +205,11 @@ const BusinessDataProvider = ({ children }) => {
         orderPayload, setOrderPayload,
         handleContactDetails,
         modalOpen, setModalOpen,
-        closeModal
-       
+        closeModal,
+        hasPromo, setHasPromo,
+        showQuickShop, setShowQuickShop,
+        selectedProduct, setSelectedProduct,
+        quickProduct, setQuickProduct  
 
     }}
     >

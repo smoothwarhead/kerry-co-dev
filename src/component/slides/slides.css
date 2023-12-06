@@ -1,0 +1,176 @@
+.slide-container{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(5, 0, 0, 0.5);
+    display: none;
+        
+}
+
+
+
+.account-slide, .cart-slide{
+    background: #fff;
+    width: 35%;
+    height: 100%;
+    z-index: 101;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 30px;
+
+   
+}
+
+.mobile-account-slide{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 120px;
+    left: -100%;
+    color: #00174f;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #F2F3F5;
+
+   
+}
+
+.slide-header{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.close-icon{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* media query */
+
+
+  @media (max-width: 1290px) and (min-width: 1120px){
+
+    .account-slide, .cart-slide{
+        
+        width: 50%;
+        
+       
+    }
+
+    .search-slide-container{       
+        top: 20vh;        
+    }
+
+
+
+  }
+
+
+  @media (max-width: 1120px) and (min-width: 0px){
+
+    .search-slide-container{       
+        top: 16vh;        
+    }
+
+
+  }
+
+
+  @media (max-width: 1120px) and (min-width: 960px){
+
+    .account-slide, .cart-slide{
+        
+        width: 55%;       
+       
+    }
+
+    .search-slide-container{       
+        top: 16vh;        
+    }
+
+    .profile-slide{
+        width: 20%;
+    }
+
+
+
+  }
+
+
+
+
+  @media (max-width: 960px) and (min-width: 720px){
+
+   .account-slide, .cart-slide{
+        
+        width: 70%;
+        
+       
+    }
+
+
+  }
+
+
+ 
+
+  @media (max-width: 720px) and (min-width: 660px){
+
+    .account-slide, .cart-slide{
+        
+        width: 80%;
+        
+       
+    }
+
+  }
+
+
+
+  @media (max-width: 660px) and (min-width: 0px){
+
+    .account-slide, .cart-slide{
+        
+        width: 100%;
+        
+       
+    }
+
+
+
+  } 
+
+
+
+
+  @media (max-width: 375px) and (min-width: 0px){
+
+    .account-slide{
+        padding: 15px;
+                
+       
+    }
+
+  } 
+
+ 

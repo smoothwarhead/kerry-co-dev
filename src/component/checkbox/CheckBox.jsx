@@ -2,6 +2,9 @@ import React from "react";
 import { useState } from "react";
 import "./checkbox.css";
 
+
+
+
 function CheckBox() {
 	const [isChecked, setIschecked] = useState(false);
 	return (

@@ -9,12 +9,12 @@ export const CartManager = {
             
     
         }else{
-            const checkItem = cartItems.find(c => (c.itemId === item.itemId) && (c.itemPrice === item.itemPrice) && (c.selectedDimension.DimensionId === item.selectedDimension.DimensionId));
+            const checkItem = cartItems.find(c => (c.itemId === item.itemId) && (c.itemPrice === item.itemPrice));
 
             if(checkItem){
 
                 const updatedCartItems = cartItems.map(c => {
-                    if((c.itemId === item.itemId) && (c.itemPrice === item.itemPrice) && (c.selectedDimension.DimensionId === item.selectedDimension.DimensionId)){
+                    if((c.itemId === item.itemId) && (c.itemPrice === item.itemPrice)){
                         
                         const newItem = {...checkItem, itemQuantity: checkItem.itemQuantity + 1};
 
@@ -61,8 +61,12 @@ export const CartManager = {
 
         }
 
-    }
+    },
 
+    removeCart(){       
+        localStorage.removeItem("cartItems");         
+        
+    }
 
 
 }

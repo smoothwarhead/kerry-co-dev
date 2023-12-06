@@ -57,9 +57,7 @@ function SortItems() {
 			<SortBy />
 			<Price />
 			<SizeDrop />
-			<Silhouette />
 			<PackSize />
-			<CollectionDrop />
 		</>
 	);
 }

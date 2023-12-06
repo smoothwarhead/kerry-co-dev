@@ -1,0 +1,270 @@
+.product-details-con{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    margin: auto;
+    padding: 0px 20px 30px 0px;
+	color: #00174F;
+
+}
+
+.p-details-name{
+    
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.p-details-price{
+   
+    font-size: 16px;
+    line-height: 24px;
+    opacity: .6;
+    margin-bottom: 20px;
+}
+
+
+
+.p-details-color{
+    display: block;
+    width: 100%;
+    height: fit-content;
+    padding: 20px 0;    
+    font-size: 14px;
+    border-top: 0.5px solid #00174F;
+}
+
+.p-details-size{
+    display: block;
+    width: 100%;
+    height: fit-content;
+    padding: 20px 0;    
+    font-size: 14px;
+    border-top: 0.5px solid #00174F;
+}
+
+.p-lbl{
+    
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+.qty-con{
+    
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid #00174F;
+
+}
+
+.qty-minus-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+
+}
+
+.qty-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    border-left: 1px solid #00174F;
+    border-right: 1px solid #00174F;
+    
+}
+
+.qty-plus-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+
+}
+
+.qty-plus-btn:hover, .qty-minus-btn:hover{
+    background: #00174F;
+    color: #fff;
+
+}
+
+
+.product-description{
+   
+    font-size: 1em;
+    line-height: 24px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 25px 0;
+   
+}
+
+
+@media (max-width: 1120px) and (min-width: 0px){
+    
+    .product-details-con{
+        width: 100%;
+    }
+
+   
+
+}
+
+
+
+
+/* @media (max-width: 1120px) and (min-width: 768px){
+    
+  
+
+    .p-details-name{
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .p-details-price{
+        font-size: 1.25em;
+        line-height: 12px;
+        margin-bottom: 20px;
+
+    }
+
+    .p-lbl{
+        font-size: 1.25em;
+        
+    }
+   
+
+} */
+
+
+/* @media (max-width: 840px) and (min-width: 768px){
+    
+  
+    .product-description{
+        font-size: 0.875em;
+    }
+   
+
+} */
+
+
+@media (max-width: 768px) and (min-width: 430px){
+    
+    .product-details-con{
+        width: 100%;
+        background: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;  
+       
+    
+    }
+
+    .p-details-name{
+        font-size: 1.25em;
+        margin-bottom: 15px;
+       
+    }
+
+    .p-details-price{
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .p-lbl{
+        font-size: 1.125em;
+    }
+
+    .dim-text{
+        font-size: 14px;
+    }
+
+    .qty-con{
+        font-size: 14px;
+    }
+
+    .product-description{
+        font-size: 14px;
+    }
+    
+   
+
+}
+
+@media (max-width: 430px) and (min-width: 0px){
+    
+    .product-details-con{
+        width: 100%;
+        background: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;  
+        padding: 20px 0;
+       
+    
+    }
+
+    .p-details-name{
+        font-size: 1.125em;
+        margin-bottom: 10px;
+       
+    }
+
+    .p-details-price{
+        font-size: 0.875em;
+        text-align: center;
+    }
+
+    .p-lbl{
+        font-size: 1em;
+    }
+
+    .dim-text{
+        font-size: 12px;
+    }
+
+    .qty-con{
+        font-size: 12px;
+        /* padding: 8px 12px; */
+    }
+
+    .qty-text{
+        width: 50px;
+        height: 25px;
+    }
+
+    /* .qty-plus-btn{
+        
+        width: 50px;
+        height: 25px;
+            
+    } */
+
+    .product-description{
+        font-size: 12px;
+    }
+    
+   
+
+}

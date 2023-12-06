@@ -3,8 +3,9 @@
 	font-size: 1.2em;
 	display: block;
 	border-top: 1px solid #8080807e;
-	border-bottom: 1px solid #8080807e;
+	
 }
+
 .sort-title {
 	display: flex;
 	justify-content: space-between;
@@ -31,6 +32,38 @@
 	height: auto;
 	display: block;
 }
+
+.flex-sort-content {
+	display: none;
+	padding-top: 15px;
+}
+
+.sort-item.open .flex-sort-content {
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.sort-btn{
+	width: fit-content;
+	height: fit-content;
+	padding: 10px 20px;
+	margin: 0 5px 5px 0;
+	font-size: 14px;
+	cursor: pointer;
+	border: 0.5px solid #00174f;
+	transition: all ease-in-out 0.7s;
+
+}
+
+.sort-btn:hover{
+	background: #00174f;
+	color: #fff;
+}
+
+
+
 .input-and-label {
 	display: flex;
 	align-items: center;

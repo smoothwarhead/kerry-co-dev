@@ -2,6 +2,10 @@ import React from "react";
 import "./signinform.css";
 import CheckBox from "../checkbox/CheckBox";
 
+
+
+
+
 function SignInForm() {
 	return (
 		<form className="signinform">

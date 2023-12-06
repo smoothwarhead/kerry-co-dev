@@ -1,0 +1,19 @@
+.loader-con{
+    width: 50%;
+    height: 70%;
+    background: transparent;
+    margin: auto;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dancing Script', cursive;
+    color: #D22121;
+
+
+}
+
+.loading-text{
+    font-size: 2.5em;
+    font-weight: 700;
+}

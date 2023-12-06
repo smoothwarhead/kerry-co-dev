@@ -1,29 +1,57 @@
 // import logo from "./logo.svg";
-import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+// import { useEffect } from "react";
 import "./App.css";
-import Navbar from "./component/navbar/Navbar";
-import Home from "./pages/home/Home";
-import BodyAndNewsletter from "./component/bodyAndNewsletter/BodyAndNewsletter";
-import SignUp from "./pages/signup/SignUp";
-import TrackOrder from "./pages/trackorder/TrackOrder";
-import Cart from "./pages/cart/Cart";
+import MainLayout from "./layouts/MainLayout";
+import Products from "./pages/business-products/Products";
+import SignUp from "./pages/account/signup/SignUp";
+import Checkout from "./pages/checkout/Checkout";
+import SelectedBusinessProduct from "./pages/selected-products/SelectedBusinessProduct";
+
+
+
 
 function App() {
-	const { pathname } = useLocation();
-	useEffect(() => {
-		window.scrollTo({ top: 0, behavior: "auto" });
-	}, [pathname]);
+	
+
 	return (
 		<div className="App">
-			<Navbar />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/signup" element={<SignUp />} />
-				<Route path="/trackorder" element={<TrackOrder />} />
-				<Route path="/cart" element={<Cart />} />
-			</Routes>
-			<BodyAndNewsletter />
+			<BrowserRouter>
+
+				
+
+
+				
+				{/* customer routes */}
+
+
+
+				<Routes>
+				
+
+					<Route path="/" element={ <MainLayout /> }> 
+
+						{/* public routes */}
+						<Route path="/register" element={ <SignUp /> } /> 
+
+						<Route path="/" element={ <Products /> } /> 
+						<Route path="/products/:id" element={ <SelectedBusinessProduct /> } /> 
+						<Route path="/products/:name/:size" element={ <SelectedBusinessProduct /> } /> 
+
+						<Route path="/checkout" element={ <Checkout /> } /> 
+						{/* <Route path="/register" element={ <CreateAccount /> } /> 
+						<Route path="/products/:id" element={ <SelectedBusinessProduct /> } /> 
+						<Route path="/checkout" element={ <Checkout /> } />  */}
+
+
+						
+					</Route>
+
+
+				
+				</Routes>
+			
+			</BrowserRouter>
 		</div>
 	);
 }

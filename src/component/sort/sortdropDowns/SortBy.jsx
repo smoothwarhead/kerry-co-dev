@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./sortitems.css";
-import { ReactComponent as Arrowdown } from "./angle-down.svg";
+import { RiArrowDownSLine } from "react-icons/ri";
 
 function SortBy() {
 	const [sortOPen, setSortOpen] = useState(false);
@@ -11,7 +11,8 @@ function SortBy() {
 			<div className="sort-title" onClick={() => setSortOpen(!sortOPen)}>
 				<p className="sort-title-p">Sort By</p>
 				<div className="sort-icon">
-					<Arrowdown />
+					<RiArrowDownSLine />
+
 				</div>
 			</div>
 			<div className="sort-content">

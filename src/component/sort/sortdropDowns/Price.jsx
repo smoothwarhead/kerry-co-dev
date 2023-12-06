@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { ReactComponent as Arrowdown } from "./angle-down.svg";
+import { RiArrowDownSLine } from "react-icons/ri";
 import "./sortitems.css";
 
 function Price() {
@@ -11,7 +11,7 @@ function Price() {
 			<div className="sort-title" onClick={() => setSortOpen(!sortOPen)}>
 				<p className="sort-title-p">Price</p>
 				<div className="sort-icon">
-					<Arrowdown />
+					<RiArrowDownSLine />
 				</div>
 			</div>
 			<div className="sort-content">
