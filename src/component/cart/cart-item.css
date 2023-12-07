@@ -1,12 +1,12 @@
 .cart-item-con{
     width: 100%;
-    height: 30%;
+    height: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
     padding: 20px 0;
-   
+     
 }
 
 .cart-item-left{
@@ -95,10 +95,6 @@
 
 
 @media (max-width: 840px) and (min-width: 480px){
-    .cart-item-con{
-        height: 25%;
-
-    }
 
     .cart-item-left{
         width: 22%;
@@ -127,18 +123,14 @@
 }
 
 @media (max-width: 480px) and (min-width: 0px){
-    .cart-item-con{
-        
-        height: 25%;
-    }
 
     .cart-item-left{
         width: 20%;
     }
 
     .item-name{
-        font-size: 4vw;
-        line-height: 10px;
+        font-size: 3.5vw;
+        line-height: 20px;
     }
 
     .item-dim{

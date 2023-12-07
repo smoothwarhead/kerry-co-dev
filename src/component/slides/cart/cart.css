@@ -143,9 +143,10 @@
 
 @media (max-width: 480px) and (min-width: 0px){
 
-    .sub-total-con{
-        padding: 0 10px;
-    }
+    /* .sub-total-con{
+        margin-top: 30px;
+    
+    } */
 
     .sub-total-title{
         font-size: 3.5vw;
