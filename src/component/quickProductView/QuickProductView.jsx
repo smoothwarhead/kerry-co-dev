@@ -372,7 +372,7 @@ function QuickProductView() {
 															<span 
 																className="quick-product-choices-el" 
 																key={i}
-																onClick={() => goToAvailableSize(quickProduct.ProductName, size)}
+																onClick={() => goToAvailableSize(quickProduct.ProductName.trim(), size)}
 															>
 																{size}
 															</span>

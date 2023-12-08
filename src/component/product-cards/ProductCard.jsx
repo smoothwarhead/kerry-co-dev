@@ -60,7 +60,7 @@ function ProductCard({ product, selectProduct, selectQuickProduct}) {
    
     useEffect(() => {
         
-        hovered ? tl.current.play() : tl.current.reverse()
+        (hovered && !mobile) ? tl.current.play() : tl.current.reverse()
    
    
    
@@ -100,6 +100,7 @@ function ProductCard({ product, selectProduct, selectQuickProduct}) {
 				onMouseLeave={() => setHovered(false)}
 			
 			>
+
 				<div className="product-img-overlay" ref={quickRef}>
 					<div
 						onClick={() => quickShopBtn()}
@@ -107,6 +108,27 @@ function ProductCard({ product, selectProduct, selectQuickProduct}) {
 						QUICK SHOP
 					</div>
 				</div>
+				
+				{/* {!mobile ?
+					<div className="product-img-overlay" ref={quickRef}>
+						<div
+							onClick={() => quickShopBtn()}
+							className="product-img-overlay-btn">
+							QUICK SHOP
+						</div>
+					</div>
+
+					: 
+
+					<div className="m-product-img-overlay">
+						<div
+							onClick={() => quickShopBtn()}
+							className="product-img-overlay-btn">
+							QUICK SHOP
+						</div>
+					</div>
+				
+				} */}
 
 
 				<div className="product-img" onClick={() => selectProduct(product)}>

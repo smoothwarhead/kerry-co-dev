@@ -287,7 +287,8 @@ const MobileQuickView = () => {
                         <div className="m-quick-slide-bottom-inner">
 
 
-                            <div className="imgs-con">
+                            <div className="imgs-con">                               
+
                                 <Carousel 
                                     responsive={responsive}
                                     swipeable={true}
@@ -299,15 +300,13 @@ const MobileQuickView = () => {
                                     {
                                         productImages.map((img, i) => (
 
-                                            <div className="m-images-con-outer"  key={i}>
-                                                <div className="m-images-con-inner">
-                                                    <div className="m-product-img">
-                                                        <AdvancedImage style={{maxWidth: '100%', maxHeight: '100%'}} cldImg={cld.image(img.image)} />
-                                                
-                                                    </div>
+                                            <div className="m-images-con-inner"   key={i}>
+                                                <div className="m-product-img">
+                                                    <AdvancedImage style={{maxWidth: '100%', maxHeight: '100%'}} cldImg={cld.image(img.image)} />
+                                            
                                                 </div>
-
                                             </div>
+
                                             
                                         ))
                                     }
@@ -320,77 +319,82 @@ const MobileQuickView = () => {
 
 
                             <div className="m-details-con">
+
+                                <div className="m-details-con-inner">
+
                             
 
-                                <div className="m-quick-view-color">
-                                    
-                                    <span className="m-quick-view-color-span">
+                                    <div className="m-quick-view-color">
                                         
-                                        {quickProduct?.Variations[0].Color}
+                                        <span className="m-quick-view-color-span">
+                                            
+                                            {quickProduct?.Variations[0].Color}
 
-                                    </span>
+                                        </span>
+                                        
+
+                                        <div className="m-quick-view-available-color"></div>
+
+                                    </div>
+
+                                    <div className="m-quick-view-size">
+                                        {formatSize(quickProduct?.Variations[0].Size)}
+                                    </div>
+
+                                    <div className="m-quick-details-qty-con">
+                                        <span className="m-quick-lbl">Quantity:</span>
+                                        <div className="m-quick-qty-con">
+                                            <span className="m-quick-qty-minus-btn" onClick={handleMinus}>
+                                                <HiMinus />
+                                            </span>
+
+                                            <span className="m-quick-qty-text">{itemQuantity}</span>
+
+                                            <span className="m-quick-qty-plus-btn" onClick={handlePlus}>
+                                                <HiPlus />
+                                            </span>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div className="m-quick-view-btn-con">
+                                        <Button
+                                            action={addToBag}
+                                            cName="add-to-bag-btn"
+                                            name="Add To Bag"
+
+                                        />
+                                    </div>
+
                                     
 
-                                    <div className="m-quick-view-available-color"></div>
-
-                                </div>
-
-                                <div className="m-quick-view-size">
-                                    {formatSize(quickProduct?.Variations[0].Size)}
-                                </div>
-
-                                <div className="m-quick-details-qty-con">
-                                    <span className="m-quick-lbl">Quantity:</span>
-                                    <div className="m-quick-qty-con">
-                                        <span className="m-quick-qty-minus-btn" onClick={handleMinus}>
-                                            <HiMinus />
-                                        </span>
-
-                                        <span className="m-quick-qty-text">{itemQuantity}</span>
-
-                                        <span className="m-quick-qty-plus-btn" onClick={handlePlus}>
-                                            <HiPlus />
-                                        </span>
+                                    <div className="m-full-details-btn"
+                                        onClick={goToFullDetails}
+                                    >
+                                        view Full Details
                                     </div>
 
-                                </div>
+                                    <div className="m-quick-product-choices-con">
+                                        <span className="m-quick-product-choices-text">Also Available In,</span>
+
+                                        <div className="m-quick-product-choices">
+                                            {
+                                                otherAvailableSizes.map((size, i) => (
+                                                    <span 
+                                                        className="m-quick-product-choices-el" 
+                                                        key={i}
+                                                        onClick={() => goToAvailableSize(quickProduct.ProductName.trim(), size)}
+
+                                                    >
+                                                        {size}
+                                                    </span>
+                                                ))
+                                            }
+                                        </div>
 
 
-                                <div className="m-quick-view-btn-con">
-                                    <Button
-                                        action={addToBag}
-                                        cName="add-to-bag-btn"
-                                        name="Add To Bag"
-
-                                    />
-                                </div>
-
-                                
-
-                                <div className="m-full-details-btn"
-                                    onClick={goToFullDetails}
-                                >
-                                    view Full Details
-                                </div>
-
-                                <div className="m-quick-product-choices-con">
-                                    <span className="m-quick-product-choices-text">Also Available In,</span>
-
-                                    <div className="m-quick-product-choices">
-                                        {
-                                            otherAvailableSizes.map((size, i) => (
-                                                <span 
-                                                    className="m-quick-product-choices-el" 
-                                                    key={i}
-													onClick={() => goToAvailableSize(quickProduct.ProductName, size)}
-
-                                                >
-                                                    {size}
-                                                </span>
-                                            ))
-                                        }
                                     </div>
-
 
                                 </div>
 

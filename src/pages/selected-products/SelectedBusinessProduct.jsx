@@ -47,6 +47,8 @@ const SelectedBusinessProduct = () => {
 
     const { id, name, size } = useParams();
 
+    console.log(id, name, size);
+
    
     const { pendingData, setPendingData } = useContext(BusinessDataContext);
 
@@ -61,14 +63,16 @@ const SelectedBusinessProduct = () => {
 
             filteredProduct = products.filter(prdt => prdt.ProductId === id);
         }else{
-
-            filteredProduct = products.filter(prdt => prdt.ProductName.toString() === name && formatSize(prdt.Variations[0].Size) === size );
+            
+            filteredProduct = products.filter(prdt => prdt.ProductName.toString().trim() === name && formatSize(prdt.Variations[0].Size).toLowerCase().trim() === size.toLowerCase() );
 
         }
 
 
 
         const product = filteredProduct[0];
+
+        console.log(product);
 
         
                     
