@@ -67,7 +67,7 @@ const CartSlide = ( ) => {
 
   const goToCheckout = () => {
     setSlideCart(false);
-    navigate("/checkout")
+    navigate("/checkout");
   } 
 
 
@@ -76,6 +76,11 @@ const CartSlide = ( ) => {
     setUnScroll(false);
   } 
 
+
+  const handleCartClose = () => {
+    setSlideCart(false);
+    setUnScroll(false);
+  }
 
 
 
@@ -96,7 +101,7 @@ const CartSlide = ( ) => {
               </div>
               <HiX 
                   className='close-icon'
-                  onClick={() => setSlideCart(false)}
+                  onClick={handleCartClose}
                   
               />
               
