@@ -5,3 +5,13 @@
 	background: transparent;
 
 }
+
+.sort-done-btn{
+	background: #00174F;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 60px;
+    transition: all 0.7s ease-in-out;
+}

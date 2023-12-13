@@ -3,6 +3,7 @@ import NavContext from "../../../context/NavContext";
 import { gsap, Power1 } from 'gsap';
 import { HiX } from 'react-icons/hi';
 import Sort from "../../sort/Sort";
+import Button from "../../button/Button";
 
 
 
@@ -75,8 +76,10 @@ const SortSlide = () => {
 
                 <div className="cart-slide-body">
 
-                    <Sort />
+                    <Sort setSlideSort={setSlideSort} />
+
                 </div>
+
 
             </div>
         </div>

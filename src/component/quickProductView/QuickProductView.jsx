@@ -28,7 +28,7 @@ import { useNavigate } from "react-router-dom";
 
 function QuickProductView() {
 
-	const {showQuickShop, setShowQuickShop, cartItems, quickProduct, handleCart } = useContext(BusinessDataContext);
+	const {showQuickShop, setShowQuickShop, quickProduct, handleCart } = useContext(BusinessDataContext);
 
 	const { mobile } = useContext(ViewContext);
 	const { setSlideCart } = useContext(NavContext);
@@ -217,7 +217,7 @@ function QuickProductView() {
 
 			const getAvailableOptions = () => {
 
-				const otherSizes = ["Small", "Medium", "Large", "Extra-Large"];
+				const otherSizes = ["Small", "Medium", "Large"];
 		
 				const size = formatSize(quickProduct?.Variations[0].Size);
 		
@@ -251,10 +251,6 @@ function QuickProductView() {
   
 	}
 
-
-
-
-	// const otherimagesUrl = ["images/classic.jpg", "images/micro.jpg", "images/stretch.jpg", "images/micro.jpg"]
 
 
 	return (

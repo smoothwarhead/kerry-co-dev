@@ -1,6 +1,8 @@
 import { createContext, useEffect, useState } from "react"
 import { CartManager } from "../utils/CartManager";
-import { useNavigate } from "react-router-dom";
+import products from '../data/products.json';
+import { FilterManager } from "../utils/FilterManager";
+
 
 
 
@@ -16,7 +18,7 @@ export const BusinessDataContext = createContext({});
 
 const BusinessDataProvider = ({ children }) => {
 
-    const [pendingData, setPendingData] = useState(false);
+    const [pendingData, setPendingData] = useState(true);
 
     const [businessProducts, setBusinessProducts] = useState([]);
     const [cartItems, setCartItems] = useState([]);
@@ -29,15 +31,21 @@ const BusinessDataProvider = ({ children }) => {
     const [modalOpen, setModalOpen] = useState(false);
     const [hasPromo, setHasPromo] = useState(false);
     const [showQuickShop, setShowQuickShop] = useState(false);
+    const [filterItems, setFilterItems] = useState([]);
 
-    
 
 
     useEffect(() => {
       const items = CartManager.getCart();
+      const filters = FilterManager.getFilter()
 
       if(items){
         setCartItems(items);
+      }else{
+        return;
+      }
+      if(filters){
+        setFilterItems(filters);
       }else{
         return;
       }
@@ -182,6 +190,138 @@ const BusinessDataProvider = ({ children }) => {
     }
 
 
+    const handleFilter = (item) => {
+
+      FilterManager.saveFilter(item);
+
+
+    
+      if(filterItems.length === 0){
+        setFilterItems([item]);
+
+      }else{
+        const checkItem = filterItems.find(f => (f.tag === item.tag));
+
+        if(checkItem){
+
+          const updatedFilterItems = filterItems.map(f => {
+            if((f.tag === item.tag)){
+              
+              return item;
+              
+            }else{
+              return f;
+            }
+          })
+
+          setFilterItems(updatedFilterItems);
+
+
+
+        }else{
+
+          setFilterItems([item, ...filterItems]);
+
+        }
+
+
+
+      }
+
+      
+      // if(checkItem){
+
+      // }
+
+    }
+
+
+    
+    const removeFilter = (tag) => {
+      const removeItem = filterItems.filter(item => item.tag !== tag);
+      setFilterItems(removeItem);
+      FilterManager.updateFilter(removeItem);
+
+     
+    };
+
+    const removeAllFilters = () => {
+      
+      setFilterItems([]);
+      FilterManager.removeFilters();     
+
+     
+    };
+
+
+
+    // useEffect(() => {
+
+    //   const filterProducts = () => {
+    //     const filters = [
+    //       {
+    //         price: {
+    //           id: "1",
+    //           minPrice: 0,
+    //           maxPrice: 20
+    //         },
+    //         packSize: {
+    //           id: "2",
+    //           item: "3"
+    //         },
+    //         size: {
+    //           id: "3",
+    //           item: "Medium"
+    //         }
+    //       }
+    //     ];
+
+    //     if(businessProducts.length === 0){
+    //       return;
+    //     }else{
+    //       const updatedProducts = businessProducts.filter(product => {
+
+    //         const variations = product.Variations[0];
+
+    //         //all
+    //         if(filters[0].packSize.item){
+              
+    //           if(variations.NumberInPack === filters[0].packSize.item){
+    //             return product;
+    //           }
+    //         }
+
+    //         //2
+    //         if(filters[0].size.item){
+
+    //           if(variations.Size === filters[0].size.item){
+    //             return product
+    //           }
+
+    //         }
+
+
+    //         if(filters[0].price.id){
+
+    //           if(variations.UnitPrice > filters[0].price.minPrice && variations.UnitPrice <= filters[0].price.maxPrice){
+    //             return product;
+    //           }
+
+    //         }
+         
+         
+    //       })
+
+    //       setBusinessProducts(updatedProducts);
+
+    //     }
+      
+    //   }
+
+    //   filterProducts();
+  
+    // },[businessProducts, setBusinessProducts]);
+
     //clear cart.
   
     // setTimeout(() => {
@@ -209,7 +349,9 @@ const BusinessDataProvider = ({ children }) => {
         hasPromo, setHasPromo,
         showQuickShop, setShowQuickShop,
         selectedProduct, setSelectedProduct,
-        quickProduct, setQuickProduct  
+        quickProduct, setQuickProduct,
+        filterItems, setFilterItems,
+        handleFilter, removeFilter, removeAllFilters
 
     }}
     >

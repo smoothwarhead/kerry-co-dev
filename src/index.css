@@ -23,9 +23,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .no-data-con{
-  margin-top: 20px;
+  margin: 20px auto;
+  border: 1px solid red;
 }
 
 .no-data{
-  font-size: 1em;
+  font-size: 14px;
+  opacity: 0.8;
+  
 }

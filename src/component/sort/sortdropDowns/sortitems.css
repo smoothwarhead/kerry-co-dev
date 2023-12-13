@@ -11,6 +11,24 @@
 	justify-content: space-between;
 	align-items: center;
 }
+
+.sort-title-p-con{
+	width: fit-content;
+	height: 100%;
+	position: relative;
+}
+
+.indicator{
+	position: absolute;
+	top: 0;
+	right: -10px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #00174f;
+}
+
+
 .sort-title-p {
 	font-size: 15px;
 	font-weight: 500;
@@ -57,10 +75,16 @@
 
 }
 
-.sort-btn:hover{
+.sort-btn.active-size{
 	background: #00174f;
 	color: #fff;
+
 }
+
+/* .sort-btn:hover{
+	background: #00174f;
+	color: #fff;
+} */
 
 
 
