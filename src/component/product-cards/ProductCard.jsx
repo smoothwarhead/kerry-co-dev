@@ -1,10 +1,8 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { useState } from "react";
 import "./product-card.css";
-import QuickProductView from "../quickProductView/QuickProductView";
 import {gsap, Power1} from 'gsap';
 import { BusinessDataContext } from "../../context/BusinessDataContext";
-// import MobileQuickView from "../mobile-quick-view/MobileQuickView";
 import { ViewContext } from "../../context/ViewContext";
 import NavContext from "../../context/NavContext";
 import {Cloudinary} from "@cloudinary/url-gen";
@@ -15,7 +13,7 @@ import { formatSize } from "../../utils/methods";
 
 
 function ProductCard({ product, selectProduct, selectQuickProduct}) {
-	// const [detail, setDetail] = useState([]);
+
 	const { setShowQuickShop} = useContext(BusinessDataContext);
 	const { setUnScroll } = useContext(NavContext);
 	const [hovered, setHovered] = useState(false);
@@ -64,7 +62,7 @@ function ProductCard({ product, selectProduct, selectQuickProduct}) {
    
    
    
-    }, [hovered]);
+    }, [hovered, mobile]);
 
 
 
@@ -108,27 +106,6 @@ function ProductCard({ product, selectProduct, selectQuickProduct}) {
 						QUICK SHOP
 					</div>
 				</div>
-				
-				{/* {!mobile ?
-					<div className="product-img-overlay" ref={quickRef}>
-						<div
-							onClick={() => quickShopBtn()}
-							className="product-img-overlay-btn">
-							QUICK SHOP
-						</div>
-					</div>
-
-					: 
-
-					<div className="m-product-img-overlay">
-						<div
-							onClick={() => quickShopBtn()}
-							className="product-img-overlay-btn">
-							QUICK SHOP
-						</div>
-					</div>
-				
-				} */}
 
 
 				<div className="product-img" onClick={() => selectProduct(product)}>
@@ -144,8 +121,7 @@ function ProductCard({ product, selectProduct, selectQuickProduct}) {
 				</div>
 				
 			</div>
-			
-			{/* {openQuickView && <QuickProductView CloseQuickView={CloseQuickView} />} */}
+
 		</>
 	);
 }

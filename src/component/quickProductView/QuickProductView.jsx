@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./quickproductview.css";
 import '../slides/slides.css';
 import { BusinessDataContext } from "../../context/BusinessDataContext";

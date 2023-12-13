@@ -8,7 +8,7 @@ import {AdvancedImage} from '@cloudinary/react';
 
 const MobileSelectedBusinessProduct = (props) => {
 
-    const { cld, itemId, itemName, selectImage, itemDescription, itemPrice, itemSize, itemColor, setItemPrice, itemQuantity, setItemQuantity,  addToBag, productImages, selectedImage  } = props;
+    const { cld, itemName, selectImage, itemDescription, itemPrice, itemSize, itemColor, itemQuantity, setItemQuantity,  addToBag, productImages, selectedImage  } = props;
 
 
 

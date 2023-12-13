@@ -1,11 +1,119 @@
 .footer{
     width: 100%;
-    background: #F9F1F3;
-    height: fit-content;
+    background: #BDCCC5;
+    height: 50vh;
     margin-top: 50px;
-    position: relative;
-   
-    /* position: fixed;
-    bottom: 0;
-    left: 0; */
+    padding: 50px;
+    color: #0A2749;
+
+}
+
+.footer-con{
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.footer-els{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-el-title{
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.footer-el-els{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-el-els a{
+    font-size: 15px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #0A2749;
+    transition: all 0.4s ease-in-out;
+}
+
+.footer-el-els a:hover{
+    font-weight: 600;
+}
+
+
+.follow-top{
+    font-size: 15px;
+    margin: 5px 0;
+}
+.follow-btm{
+    width: 100%;
+    margin: 5px 0;
+    display: flex;
+    
+    align-items: center;
+
+}
+
+.footer-icon{
+    font-size: 24px;
+    color: #0A2749;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.footer-icon:hover{
+    font-weight: 600;
+
+}
+
+
+@media (max-width: 960px) and (min-width: 600px){
+
+	.footer{
+        height: 70vh;
+
+    }
+
+    .footer-con{
+        width: 90%;
+        
+    }
+
+    .footer-els{        
+        width: 45%;
+           
+    }
+  
+ 
+}
+
+@media (max-width: 600px) and (min-width: 0px){
+
+	.footer{
+        height: 80vh;
+        padding: 25px;
+    }
+
+    .footer-con{
+        width: 95%;
+        
+    }
+
+    .footer-els{        
+        width: 100%;
+           
+    }
+    
+ 
 }

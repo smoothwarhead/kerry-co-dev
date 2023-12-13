@@ -716,3 +716,33 @@ export const states = [
     },
    
 ]
+
+
+export const customerSupport = [
+    {
+        title: "About us",
+        path: "/about-us"
+    },
+    {
+        title: "My Account",
+        path: "/account"
+    },
+    {
+        title: "Order",
+        path: "/order"
+    },
+    {
+        title: "Check Order Status",
+        path: "/order-status"
+    },
+    {
+        title: "Secure Payments",
+        path: "/secure-payments"
+    },
+    
+    
+    
+    
+    
+
+]

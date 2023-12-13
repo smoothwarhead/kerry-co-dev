@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { useState, useEffect } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
 import "./sortitems.css";
-import products from '../../../data/products.json';
 import { BusinessDataContext } from "../../../context/BusinessDataContext";
 import { formatSize } from "../../../utils/methods";
 
@@ -16,13 +15,12 @@ function SizeDrop() {
 
 	const [sortOPen, setSortOpen] = useState(false);
 
-	// const [selectedSize, setSelectedSize] = useState("");
 	const [activeSize, setActiveSize] = useState("");
 
 	const [indicator, setIndicator] = useState(false);
 
 
-	const { setBusinessProducts, filterItems, handleFilter } = useContext(BusinessDataContext);
+	const { filterItems, handleFilter } = useContext(BusinessDataContext);
 
 
 	
@@ -80,20 +78,9 @@ function SizeDrop() {
 	}, [filterItems, setIndicator]);
 
 
-	// useEffect(() => {
-	// 	const filteredProducts = products.filter(product => product.Variations[0].Size === selectedSize.toString());
-
-	// 	setBusinessProducts(filteredProducts);
-		
-	// }, [selectedSize, setBusinessProducts])
-
-
-
 
 	const makeSelectedSize = (s) => {
 	
-		
-		// setSelectedSize(s.size);
 		setActiveSize(s.id);
 
 		const newFilter = {

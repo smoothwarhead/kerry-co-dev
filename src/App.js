@@ -1,6 +1,5 @@
-// import logo from "./logo.svg";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-// import { useEffect } from "react";
+
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import "./App.css";
 import MainLayout from "./layouts/MainLayout";
 import Products from "./pages/business-products/Products";
@@ -39,11 +38,7 @@ function App() {
 						<Route path="/products/:name/:size" element={ <SelectedBusinessProduct /> } /> 
 
 						<Route path="/checkout" element={ <Checkout /> } /> 
-						{/* <Route path="/register" element={ <CreateAccount /> } /> 
-						<Route path="/products/:id" element={ <SelectedBusinessProduct /> } /> 
-						<Route path="/checkout" element={ <Checkout /> } />  */}
-
-
+						
 						
 					</Route>
 

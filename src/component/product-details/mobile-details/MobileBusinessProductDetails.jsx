@@ -1,4 +1,3 @@
-import {AdvancedImage} from '@cloudinary/react';
 import './mobile-product-details.css';
 import { HiMinus, HiPlus } from 'react-icons/hi';
 import Button from '../../button/Button';

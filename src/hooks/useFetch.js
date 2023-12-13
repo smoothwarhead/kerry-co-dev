@@ -1,9 +1,5 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Api } from "../api/axios";
-import { BusinessDataContext } from "../context/BusinessDataContext";
-
-
-
 
 
 
@@ -12,9 +8,6 @@ const useFetch = (url) => {
     const [data, setData] = useState([]);
     const [dataError, setDataError] = useState("");
     const [loading, setLoading] = useState(true);
-    // const {setPendingData} = useContext(BusinessDataContext);
-
-
   
 
     useEffect(() => {

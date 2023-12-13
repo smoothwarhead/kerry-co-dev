@@ -3,7 +3,7 @@ import './account-slide.css';
 import { useRef, useEffect, useContext, useState } from 'react';
 import { gsap, Power1 } from 'gsap';
 // import ForgotSlide from './ForgotSlide';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { signInInputs } from '../../../utils/inputs';
 import NavContext from '../../../context/NavContext';
 import usePasswordToggle from '../../../hooks/usePasswordToggle';
@@ -36,7 +36,6 @@ const AccountSlide = () => {
     const accountRef = useRef();
     const containerRef = useRef();
 
-    const navigate = useNavigate();
 
     const [values, setValues] = useState(initialValues);
 
@@ -44,7 +43,7 @@ const AccountSlide = () => {
 
 
 
-    const {setSlide, setSlideMenu, slideAccount, setSlideAccount, setSlideForgot} = useContext(NavContext);
+    const {setSlideMenu, slideAccount, setSlideAccount, setSlideForgot} = useContext(NavContext);
 
 
     const { mobile } = useContext(ViewContext);

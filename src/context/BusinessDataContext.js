@@ -1,6 +1,5 @@
 import { createContext, useEffect, useState } from "react"
 import { CartManager } from "../utils/CartManager";
-import products from '../data/products.json';
 import { FilterManager } from "../utils/FilterManager";
 
 

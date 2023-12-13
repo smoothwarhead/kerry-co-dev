@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import './mobileQuickView.css';
 import { BusinessDataContext } from '../../context/BusinessDataContext';
 import { ViewContext } from '../../context/ViewContext';

@@ -5,10 +5,9 @@ import './selected-products.css';
 import { HiOutlineArrowNarrowLeft } from 'react-icons/hi';
 import {Cloudinary} from "@cloudinary/url-gen";
 import {AdvancedImage} from '@cloudinary/react';
-// import { axiosPrivate } from '../../api/axios';
-// import SessionManager from '../../files/SessionManager';
+
 import NavContext from '../../context/NavContext';
-import products from '../../data/products.json';
+
 import otherImages from '../../data/otherImages.json';
 import { ViewContext } from '../../context/ViewContext';
 import Loader from '../../component/loader/Loader';
@@ -16,7 +15,7 @@ import { BusinessDataContext } from '../../context/BusinessDataContext';
 import BusinessProductDetails from '../../component/product-details/BusinessProductDetails';
 
 import MobileSelectedBusinessProduct from './mobile-selected/MobileSelectedBusinessProduct';
-import { formatSize, returnPack2Images } from '../../utils/methods';
+import { returnPack2Images } from '../../utils/methods';
 import useFetch from '../../hooks/useFetch';
 
 

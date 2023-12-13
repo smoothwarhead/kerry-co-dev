@@ -3,14 +3,12 @@ import './menu-btn.css';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { HiXMark } from "react-icons/hi2";
 import NavContext from '../../context/NavContext';
-import { ViewContext } from '../../context/ViewContext';
 
 
 const MenuBtn = () => {
 
     const {  setSlideMenu, slide, setSlide, setUnScroll } = useContext(NavContext);
 
-    const {mobile} = useContext(ViewContext);
 
     const handleMenuOpen = () => {
 

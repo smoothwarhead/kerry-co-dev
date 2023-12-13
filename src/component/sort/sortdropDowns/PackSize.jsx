@@ -12,11 +12,10 @@ function PackSize() {
 
 	const [sortOPen, setSortOpen] = useState(false);
 
-	// const [selectedSize, setSelectedSize] = useState("");
 	const [activeSize, setActiveSize] = useState("");
 	const [indicator, setIndicator] = useState(false);
 
-	const { businessProducts, setBusinessProducts, handleFilter, filterItems } = useContext(BusinessDataContext);
+	const { handleFilter, filterItems } = useContext(BusinessDataContext);
 
 
 	const packSizes =  [
@@ -30,15 +29,6 @@ function PackSize() {
 		},
 
 	];
-
-
-	// useEffect(() => {
-	// 	console.log(selectedSize);
-	// 	const filteredProducts = businessProducts.filter(product => product.Variations[0].NumberInPack === selectedSize.toString());
-
-	// 	setBusinessProducts(filteredProducts);
-		
-	// }, [selectedSize,setBusinessProducts]);
 
 
 
@@ -60,19 +50,6 @@ function PackSize() {
 
 
 				setActiveSize(pack.id);
-
-
-				
-				// if(checkTag.text === '3 Pack'){
-
-				// 	// setSelectedSize("3");
-				// 	setActiveSize(pack.id);
-				// }
-				// if(checkTag.text === '2 Pack'){
-				// 	// setSelectedSize("2");
-				// 	setActiveSize(pack.id);
-				// }
-
 
 			}else{
 				setIndicator(false);
@@ -119,7 +96,6 @@ function PackSize() {
 	}
 
 
-	// console.log(activeSize, selectedSize);
 
 
 	return (

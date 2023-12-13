@@ -5,7 +5,7 @@ import NavContext from '../../context/NavContext';
 const UserBar = () => {
     const navigate = useNavigate();
 
-    const { slideAccount, setSlideAccount, openUser, setOpenUser} = useContext(NavContext);
+    const { slideAccount, setSlideAccount, setOpenUser} = useContext(NavContext);
 
     const handleSignInClick = () => {
         if(!slideAccount){
