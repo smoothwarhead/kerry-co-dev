@@ -24,11 +24,12 @@ body::-webkit-scrollbar-thumb {
 
 .no-data-con{
   margin: 20px auto;
-  border: 1px solid red;
+  
 }
 
 .no-data{
   font-size: 14px;
+  line-height: 20px;
   opacity: 0.8;
   
 }

@@ -43,12 +43,7 @@ function SizeDrop() {
 		{
 			id: 4,
 			size: "XL"
-		},
-		{
-			id: 5,
-			size: "XXL"
-		},
-
+		}
 	];
 
 
